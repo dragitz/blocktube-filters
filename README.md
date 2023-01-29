@@ -22,7 +22,7 @@ List of personal regex filters
 [^\x00-\x7F]+/g
 ```
 
-## Malware - 
+## Malware
 ```
 // Blocks: *2023*, *new*, *crazy*, *undetected*, ecc..
 /\*[a-zA-Z0-9]+\*/i
@@ -36,7 +36,7 @@ List of personal regex filters
 /(?=(?:[^,]*\,){2,})(?:[^,]*\,)/i
 /(?=(?:[^#]*\#){2,})(?:[^#]*\#)/i
 ```
-// match multiple words, doesn't matter the order
+Match multiple words, doesn't matter the order
 ```
 /^(download [a-zA-Z0-9\s]+ cheat|[a-zA-Z0-9\s]+ crack download|download [a-zA-Z0-9\s]+ mod apk)$/i
 /(?=.*%)(?=.*hack)(?=.*||)/i
