@@ -5,7 +5,8 @@ List of personal regex filters
 
 ## Emojis and clickbait)
 ```
-/(?=.*‼️|✅|✔️|👉|👽|💪|📌|🔥|😂|😆|😍|😦|😱|😳|🙏|💖|💞|💡|😊|🐼|🎬)/
+// Emojis and clickbait)
+/(?=.*‼️|✅|✔️|👉|👽|💪|📌|🔥|😂|😆|😍|😦|😱|😳|🙏|💖|💞|💡|😊|🐼|🎬|❌)/
 /^(you won't believe what happens next|top [0-9]+ things you need to see|[0-9]+ shocking facts about|how to [0-9]+x your [0-9]+ in [0-9]+ easy steps|[0-9]+ reasons why [a-zA-Z0-9\s]+ is the best)$/i
 /(viral video)|(simple trick)|(watch until the end)|(over 10 million views)/i
 /\d+ (easy|simple|surprising|unexpected|best|clever|crazy|must-know|daily|ingenious) (ways|hacks|must-know|survival|cleaning|secret|solutions) (to|for|that|hacks|tips) [a-zA-Z ]+/i
@@ -21,7 +22,21 @@ List of personal regex filters
 [^\x00-\x7F]+/g
 ```
 
-## Malware - match multiple words, doesn't matter the order
+## Malware - 
+```
+// Blocks: *2023*, *new*, *crazy*, *undetected*, ecc..
+/\*[a-zA-Z0-9]+\*/i
+
+// all the pipes that appeared more than 1 time in the text, whether they were sequential or not
+// Blocks "|hello|world|" and "|abc|def|ghi|", often used by scammers and videos with fradulent software
+/(?=(?:[^|]*\|){2,})(?:[^|]*\|)/i
+
+// same as before but for "/" , "#" and ","
+/(?=(?:[^/]*\/){2,})(?:[^/]*\/)/i
+/(?=(?:[^,]*\,){2,})(?:[^,]*\,)/i
+/(?=(?:[^#]*\#){2,})(?:[^#]*\#)/i
+```
+// match multiple words, doesn't matter the order
 ```
 /^(download [a-zA-Z0-9\s]+ cheat|[a-zA-Z0-9\s]+ crack download|download [a-zA-Z0-9\s]+ mod apk)$/i
 /(?=.*%)(?=.*hack)(?=.*||)/i
