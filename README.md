@@ -6,7 +6,7 @@ List of personal regex filters
 ## Emojis and clickbait)
 ```
 // Emojis and clickbait)
-/(?=.*‼️|✅|✔️|👉|👽|💪|📌|🔥|😂|😆|😍|😦|😱|😳|🙏|💖|💞|💡|😊|🐼|🎬|❌)/
+/(?=.*‼️|✅|✔️|👉|👽|💪|📌|😂|😆|😍|😦|😱|😳|🙏|💖|💞|💡|😊|🐼|🎬|❌|🤯)/
 /^(you won't believe what happens next|top [0-9]+ things you need to see|[0-9]+ shocking facts about|how to [0-9]+x your [0-9]+ in [0-9]+ easy steps|[0-9]+ reasons why [a-zA-Z0-9\s]+ is the best)$/i
 /(viral video)|(simple trick)|(watch until the end)|(over 10 million views)/i
 /\d+ (easy|simple|surprising|unexpected|best|clever|crazy|must-know|daily|ingenious) (ways|hacks|must-know|survival|cleaning|secret|solutions) (to|for|that|hacks|tips) [a-zA-Z ]+/i
@@ -97,7 +97,10 @@ Match multiple words, doesn't matter the order
 
 ## Ignorant and time wasting videos
 ```
+// Ignorant or time wasting videos (generic)
 /(?=.*must watch)/i
+/(?=.*meditation)/i
+/(?=.*meditate)/i
 /(?=.*everyday hacks)/i
 /(?=.*food hacks)/i
 /(?=.*genius hack)/i
@@ -111,10 +114,13 @@ Match multiple words, doesn't matter the order
 /(?=.*lifehacks)/i
 /(?=.*lifehacks,)/i
 /(?=.*react to)/i
+/(?=.*reacts)/i
 /(?=.*123 go)/i
 /(?=.*123 go!)/i
 /(?=.*la la life)/i
 /(?=.*#short)/i
+/(?=.*eleven)/i
+/(?=.*in 2023)/i
+/(?=.*meme)/i
 /(?=.*memes)/i
-/(?=.*family guy)/i
 ```
